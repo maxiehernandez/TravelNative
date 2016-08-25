@@ -1,3 +1,5 @@
 class Traveler < ApplicationRecord
-  has_one :user
+  belongs_to :user
+  has_many :reviews
+  has_many :locals, through: :local_traveler
 end

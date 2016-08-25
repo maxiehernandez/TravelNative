@@ -1,4 +1,6 @@
 class Local < ApplicationRecord
-  has_one :user
+  belongs_to :user
   has_many :itineraries
+  has_many :reviews
+  has_many :travelers, through: :local_traveler
 end
